@@ -9,11 +9,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pickle
 import base64
+from flask_cors import CORS
 
 STOPWORDS = set(stopwords.words("english"))
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route("/test", methods=["GET"])
 def test():
